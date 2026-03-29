@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serrurier Urgence Marseille | 24/7 Intervention 30 min | 07 53 67 38 66</title>
-    <meta name="description" content="Serrurier d'urgence à Marseille. Ouverture de porte, changement de serrure et blindage 24h/24. Intervention express en 30 min. Agréé assurances.">
+    <title>Serrurier Urgence Marseille | Intervention 30 min | 07 53 67 38 66</title>
+    <meta name="description" content="Serrurier d'urgence à Marseille et alentours (50km). Ouverture de porte, changement de serrure et blindage 24/7. Intervention express 30 min.">
     
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', { 
-          'ad_storage': 'denied', 
-          'ad_user_data': 'denied', 
-          'ad_ads_optimization': 'denied', 
-          'ad_personalization': 'denied', 
-          'analytics_storage': 'denied' 
-      });
+      gtag('consent', 'default', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_ads_optimization': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied' });
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17776892300"></script>
     <script>gtag('js', new Date()); gtag('config', 'AW-17776892300');</script>
@@ -24,57 +18,70 @@
     
     <style>
         :root { 
-            --bg-dark: #0f172a; 
-            --bg-card: #1e293b; 
+            --bg-dark: #000000; 
+            --bg-card: #0a0a0a; 
             --accent-red: #FF0000; 
             --success-green: #22c55e; 
             --text-white: #ffffff; 
             --text-gray: #94a3b8; 
+            --border: #1a1a1a;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing: antialiased; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-white); background-color: var(--bg-dark); line-height: 1.5; overflow-x: hidden; }
         
-        .header { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; position: sticky; top:0; z-index:1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; position: sticky; top:0; z-index:1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
         .logo { font-weight: 800; font-size: 1.1rem; } 
         .logo span { color: var(--accent-red); }
-        .nav-phone { text-decoration: none; color: var(--text-white); font-weight: 800; border: 1px solid var(--accent-red); padding: 5px 12px; border-radius: 8px; }
+        .nav-phone { text-decoration:none; color:var(--accent-red); font-weight:800; border: 2px solid var(--accent-red); padding: 5px 10px; border-radius: 8px; }
 
-        .hero { padding: 60px 20px; text-align: center; }
-        .status-pill { display: inline-block; color: var(--success-green); font-weight: 800; font-size: 0.8rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--success-green); padding: 5px 15px; border-radius: 50px; }
-        .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+        .hero { padding: 80px 20px 60px; text-align: center; }
+        .status-pill { display: inline-block; color: var(--success-green); font-weight: 800; font-size: 0.8rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; background: rgba(34, 197, 94, 0.1); padding: 8px 15px; border-radius: 50px; }
+        .hero h1 { font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 800; margin-bottom: 20px; line-height: 1; letter-spacing: -1px; }
         .hero p { font-size: 1.1rem; color: var(--text-gray); max-width: 600px; margin: 0 auto 30px; }
         
-        .cta-container { width: 100%; max-width: 450px; margin: 0 auto; }
-        .cta-btn { background: var(--accent-red); color: white; padding: 20px; border-radius: 15px 15px 0 0; text-decoration: none; font-weight: 800; display: block; box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3); transition: transform 0.2s; }
-        .cta-btn:active { transform: scale(0.98); }
-        .cta-btn span { font-size: 1.8rem; display: block; margin-top: 5px; }
+        .cta-container { width: 100%; max-width: 480px; margin: 0 auto; position: relative; }
+        .cta-btn { background: var(--accent-red); color: white; padding: 25px; border-radius: 15px 15px 0 0; text-decoration: none; font-weight: 800; display: block; box-shadow: 0 10px 40px rgba(255, 0, 0, 0.4); }
+        .cta-btn span { font-size: 2.2rem; display: block; margin-top: 5px; letter-spacing: 1px; }
         
-        /* Zone Assurances Fixe */
-        .insurance-box { background: #e2e8f0; color: #1e293b; padding: 15px; font-weight: 800; font-size: 0.75rem; border-radius: 0 0 15px 15px; text-align: center; line-height: 1.4; }
+        .marquee-container { background: #fff; color: #000; overflow: hidden; white-space: nowrap; padding: 10px 0; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; }
+        .cta-marquee { border-radius: 0 0 15px 15px; background: #f8fafc; }
+        .marquee-content { display: inline-block; animation: marquee 25s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        .services-title { text-align: center; margin-top: 60px; font-weight: 800; font-size: 1.5rem; color: var(--text-white); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
-        .card { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; }
-        .card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--accent-red); display: flex; flex-direction: column; gap: 10px; }
-        .card h3 i { font-style: normal; font-size: 2rem; }
+        .section-title { text-align: center; margin-top: 80px; font-weight: 800; font-size: 1.8rem; color: var(--text-white); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
+        .card { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid var(--border); text-align: center; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--accent-red); }
         .card p { font-size: 0.95rem; color: var(--text-gray); }
 
-        /* Bandeau Info Fixe en bas */
-        .info-bar-bottom { background: var(--accent-red); color: white; padding: 20px; margin-top: 50px; font-weight: 800; text-align: center; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .reviews { display: flex; gap: 20px; overflow-x: auto; padding: 40px 5%; scroll-snap-type: x mandatory; }
+        .rev-card { min-width: 300px; background: var(--bg-card); padding: 25px; border-radius: 15px; border: 1px solid var(--border); scroll-snap-align: center; }
+        .stars { color: #FFD700; margin-bottom: 10px; font-size: 0.9rem; }
 
-        .footer-legal { padding: 40px 5% 120px; font-size: 0.8rem; color: var(--text-gray); text-align: center; }
+        .faq { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .faq-item { background: var(--bg-card); padding: 20px; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--border); }
+        .faq-item h4 { color: var(--accent-red); margin-bottom: 8px; font-weight: 800; }
+
+        .footer-marquee { background: var(--accent-red); color: white; padding: 15px 0; margin-top: 50px; }
         
-        #cookie-msg { position: fixed; bottom: 100px; left: 20px; right: 20px; background: white; color: black; padding: 25px; border-radius: 20px; z-index: 3000; display: none; max-width: 400px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .zones { padding: 40px 5%; text-align: center; background: #050505; }
+        .tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 20px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+        .tag { font-size: 0.65rem; color: #555; background: #111; padding: 4px 8px; border-radius: 4px; border: 1px solid #1a1a1a; }
+
+        .footer-legal { padding: 40px 5% 120px; font-size: 0.8rem; color: #444; text-align: center; }
+        
+        #cookie-msg { position: fixed; bottom: 100px; left: 20px; right: 20px; background: white; color: black; padding: 25px; border-radius: 20px; z-index: 3000; display: none; max-width: 400px; }
         .ck-btns { display: flex; gap: 10px; margin-top: 20px; } 
         .ck-btn { flex: 1; padding: 15px; border-radius: 12px; border: none; font-weight: 800; cursor: pointer; }
         .ck-accept { background: var(--accent-red); color: white; } 
         .ck-refuse { background: #cbd5e1; }
 
-        .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-dark); padding: 15px; display: flex; z-index: 2000; border-top: 1px solid rgba(255,255,255,0.1); }
-        .btn-call-sticky { flex: 1; background: var(--accent-red); color: white; text-align: center; padding: 20px; border-radius: 15px; font-weight: 800; text-decoration: none; font-size: 1.2rem; }
-        
-        @media (min-width: 1024px) { .hero h1 { font-size: 3.5rem; } .mobile-bar { display: none; } }
+        .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); padding: 15px; display: flex; z-index: 2000; border-top: 1px solid var(--border); }
+        .btn-call-sticky { flex: 1; background: var(--accent-red); color: white; text-align: center; padding: 20px; border-radius: 12px; font-weight: 900; text-decoration: none; font-size: 1.3rem; box-shadow: 0 0 20px rgba(255,0,0,0.3); }
+
+        @media (min-width: 1024px) { .mobile-bar { display: none; } }
     </style>
 </head>
 <body>
@@ -85,46 +92,91 @@
 </header>
 
 <section class="hero">
-    <div class="status-pill">● Intervention en 30 minutes à Marseille</div>
-    <h1>Serrurier Urgence Marseille</h1>
-    <p>Porte claquée, serrure cassée ou effraction ? Notre équipe d'artisans intervient en urgence 24h/24 et 7j/7 dans tous les arrondissements de Marseille.</p>
+    <div class="status-pill">● Intervention en 30 min • Marseille & 50km Alentours</div>
+    <h1>URGENCE SERRURERIE MARSEILLE</h1>
+    <p>Porte bloquée ou clés perdues ? Nos artisans interviennent 24/7 pour tout dépannage immédiat sur la métropole.</p>
     
     <div class="cta-container">
         <a href="tel:0753673866" class="cta-btn">
             APPELER MAINTENANT
             <span>07 53 67 38 66</span>
         </a>
-        <div class="insurance-box">
-            AGRÉÉ TOUTES ASSURANCES<br>
-            ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT
+        <div class="marquee-container cta-marquee">
+            <div class="marquee-content">
+                AGRÉÉ TOUTES ASSURANCES — ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT — AXA — ALLIANZ — MAIF — MACIF — 
+            </div>
         </div>
     </div>
 </section>
 
-<h2 class="services-title">NOS SERVICES À MARSEILLE</h2>
-
+<h2 class="section-title">NOS SERVICES</h2>
 <div class="grid">
-    <div class="card"><h3><i>🔑</i>Ouverture de porte</h3><p>Ouverture fine sans dégâts pour portes claquées ou verrouillées.</p></div>
-    <div class="card"><h3><i>🔒</i>Changement de serrure</h3><p>Remplacement de cylindre toutes marques (Vachette, Fichet, Picard...).</p></div>
-    <div class="card"><h3><i>🛡️</i>Blindage de porte</h3><p>Renforcement de votre sécurité avec blindage et cornières anti-pinces.</p></div>
-    <div class="card"><h3><i>🏬</i>Volets & Rideaux</h3><p>Déblocage et réparation de vos fermetures commerciales ou de garage.</p></div>
-    <div class="card"><h3><i>📬</i>Boîtes aux lettres</h3><p>Ouverture et remplacement de serrure de boîte aux lettres.</p></div>
-    <div class="card"><h3><i>💎</i>Coffre-fort</h3><p>Service d'ouverture technique pour coffres et armoires fortes.</p></div>
-    <div class="card"><h3><i>🪟</i>Verrous fenêtres</h3><p>Installation de verrous haute sécurité pour vos accès vitrés.</p></div>
-    <div class="card"><h3><i>🚪</i>Ferme-portes</h3><p>Installation et réglage de grooms pour accès copropriété.</p></div>
+    <div class="card"><h3>🔑 Ouverture de porte</h3><p>Ouverture propre sans dégâts pour portes claquées ou verrouillées.</p></div>
+    <div class="card"><h3>🔒 Changement de serrure</h3><p>Cylindres haute sécurité toutes marques (Vachette, Fichet, Picard...).</p></div>
+    <div class="card"><h3>🛡️ Blindage de porte</h3><p>Installation de plaques d'acier et cornières anti-pinces.</p></div>
+    <div class="card"><h3>🏬 Rideaux Métalliques</h3><p>Déblocage express pour commerces et garages 24/7.</p></div>
 </div>
 
-<div class="info-bar-bottom">
-    Intervention Express 30 Min — 24h/24 & 7j/7 — Devis Gratuit
+<h2 class="section-title">AVIS CLIENTS</h2>
+<div class="reviews">
+    <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p>"Arrivé en 20 min pour ma porte claquée. Travail très honnête !"</p>
+        <small style="color:var(--accent-red)">- Marc L. (Marseille)</small>
+    </div>
+    <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p>"Serrurier pro, il a ouvert ma porte sans rien casser. Top !"</p>
+        <small style="color:var(--accent-red)">- Sophie D. (Aix-en-Provence)</small>
+    </div>
+    <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p>"Disponible en pleine nuit à Aubagne. Service impeccable."</p>
+        <small style="color:var(--accent-red)">- Yanis K. (Aubagne)</small>
+    </div>
 </div>
+
+<h2 class="section-title">QUESTIONS FRÉQUENTES</h2>
+<div class="faq">
+    <div class="faq-item">
+        <h4>Intervenez-vous hors de Marseille ?</h4>
+        <p>Oui, nous couvrons un rayon de 50 km autour de Marseille, incluant Aix, Aubagne et le pourtour de l'Étang de Berre 24/7.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Le devis est-il gratuit ?</h4>
+        <p>Absolument. Un devis clair et détaillé est présenté gratuitement avant toute intervention pour garantir une totale transparence.</p>
+    </div>
+</div>
+
+<div class="footer-marquee">
+    <div class="marquee-container" style="background:transparent; color:white; font-size:1.1rem;">
+        <div class="marquee-content">INTERVENTION EXPRESS 30 MIN — 24/7 — AGRÉÉ TOUTES ASSURANCES — DEVIS GRATUIT — </div>
+    </div>
+</div>
+
+<section class="zones">
+    <p style="font-weight:800; font-size: 0.9rem; margin-bottom: 10px;">ZONES D'INTERVENTION (50 KM)</p>
+    <div class="tag-container">
+        <span class="tag">13001</span> <span class="tag">13002</span> <span class="tag">13003</span> <span class="tag">13004</span> <span class="tag">13005</span>
+        <span class="tag">13006</span> <span class="tag">13007</span> <span class="tag">13008</span> <span class="tag">13009</span> <span class="tag">13010</span>
+        <span class="tag">13011</span> <span class="tag">13012</span> <span class="tag">13013</span> <span class="tag">13014</span> <span class="tag">13015</span> <span class="tag">13016</span>
+        <span class="tag">13100 Aix-en-Provence</span> <span class="tag">13400 Aubagne</span> <span class="tag">13260 Cassis</span> 
+        <span class="tag">13600 La Ciotat</span> <span class="tag">13700 Marignane</span> <span class="tag">13127 Vitrolles</span>
+        <span class="tag">13500 Martigues</span> <span class="tag">13090 Aix</span> <span class="tag">13170 Les Pennes-Mirabeau</span>
+        <span class="tag">13120 Gardanne</span> <span class="tag">13110 Port-de-Bouc</span> <span class="tag">13800 Istres</span>
+        <span class="tag">13300 Salon-de-Provence</span> <span class="tag">13190 Allauch</span> <span class="tag">13380 Plan-de-Cuques</span>
+        <span class="tag">13821 La Penne-sur-Huveaune</span> <span class="tag">13720 La Bouilladisse</span> <span class="tag">13480 Cabriès</span>
+        <span class="tag">13105 Mimet</span> <span class="tag">13790 Châteauneuf-le-Rouge</span>
+    </div>
+</section>
 
 <footer class="footer-legal">
-    <p><strong>Mentions Légales :</strong> SOS Serrurier Marseille. TVA non applicable. Agrément assurances françaises. Hébergement : Netlify Inc. Un devis gratuit est remis avant chaque intervention.</p>
+    <p><strong>Mentions Légales :</strong> SOS Serrurier Marseille 24/7. TVA non applicable. Agrément assurances habitation.</p>
     <p>© 2026 Expert Serrurerie Marseille - Tous droits réservés.</p>
 </footer>
 
 <div id="cookie-msg">
-    <p><strong>Gestion des Cookies</strong><br>Nous utilisons des cookies pour optimiser votre appel d'urgence à Marseille.</p>
+    <p><strong>Gestion des Cookies</strong><br>Optimisez votre appel d'urgence Marseille.</p>
     <div class="ck-btns">
         <button class="ck-btn ck-refuse" onclick="setConsent('denied')">Refuser</button>
         <button class="ck-btn ck-accept" onclick="setConsent('granted')">Accepter</button>
@@ -132,7 +184,7 @@
 </div>
 
 <div class="mobile-bar">
-    <a href="tel:0753673866" class="btn-call-sticky">📞 APPELER : 07 53 67 38 66</a>
+    <a href="tel:0753673866" class="btn-call-sticky">📞 URGENCE : 07 53 67 38 66</a>
 </div>
 
 <script>
@@ -147,5 +199,6 @@
         } 
     };
 </script>
+
 </body>
 </html>
