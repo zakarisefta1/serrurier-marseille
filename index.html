@@ -9,8 +9,6 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      
-      // Configuration par défaut (tout refusé selon RGPD)
       gtag('consent', 'default', { 
           'ad_storage': 'denied', 
           'ad_user_data': 'denied', 
@@ -52,9 +50,8 @@
         .cta-btn:active { transform: scale(0.98); }
         .cta-btn span { font-size: 1.8rem; display: block; margin-top: 5px; }
         
-        .marquee-container { background: #e2e8f0; color: #475569; overflow: hidden; white-space: nowrap; padding: 10px 0; font-weight: 800; font-size: 0.75rem; border-radius: 0 0 15px 15px; }
-        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        /* Zone Assurances Fixe */
+        .insurance-box { background: #e2e8f0; color: #1e293b; padding: 15px; font-weight: 800; font-size: 0.75rem; border-radius: 0 0 15px 15px; text-align: center; line-height: 1.4; }
 
         .services-title { text-align: center; margin-top: 60px; font-weight: 800; font-size: 1.5rem; color: var(--text-white); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
@@ -63,7 +60,9 @@
         .card h3 i { font-style: normal; font-size: 2rem; }
         .card p { font-size: 0.95rem; color: var(--text-gray); }
 
-        .footer-marquee { background: var(--accent-red); color: white; padding: 15px 0; margin-top: 50px; font-weight: 800; overflow: hidden; }
+        /* Bandeau Info Fixe en bas */
+        .info-bar-bottom { background: var(--accent-red); color: white; padding: 20px; margin-top: 50px; font-weight: 800; text-align: center; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
         .footer-legal { padding: 40px 5% 120px; font-size: 0.8rem; color: var(--text-gray); text-align: center; }
         
         #cookie-msg { position: fixed; bottom: 100px; left: 20px; right: 20px; background: white; color: black; padding: 25px; border-radius: 20px; z-index: 3000; display: none; max-width: 400px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
@@ -73,7 +72,7 @@
         .ck-refuse { background: #cbd5e1; }
 
         .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-dark); padding: 15px; display: flex; z-index: 2000; border-top: 1px solid rgba(255,255,255,0.1); }
-        .btn-call-sticky { flex: 1; background: var(--accent-red); color: white; text-align: center; padding: 20px; border-radius: 15px; font-weight: 800; text-decoration: none; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(255,0,0,0.3); }
+        .btn-call-sticky { flex: 1; background: var(--accent-red); color: white; text-align: center; padding: 20px; border-radius: 15px; font-weight: 800; text-decoration: none; font-size: 1.2rem; }
         
         @media (min-width: 1024px) { .hero h1 { font-size: 3.5rem; } .mobile-bar { display: none; } }
     </style>
@@ -86,7 +85,7 @@
 </header>
 
 <section class="hero">
-    <div class="status-pill">● Intervention en 30 minutes à Marseille et alentours</div>
+    <div class="status-pill">● Intervention en 30 minutes à Marseille</div>
     <h1>Serrurier Urgence Marseille</h1>
     <p>Porte claquée, serrure cassée ou effraction ? Notre équipe d'artisans intervient en urgence 24h/24 et 7j/7 dans tous les arrondissements de Marseille.</p>
     
@@ -95,10 +94,9 @@
             APPELER MAINTENANT
             <span>07 53 67 38 66</span>
         </a>
-        <div class="marquee-container">
-            <div class="marquee-content">
-                AGRÉÉ TOUTES ASSURANCES — ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT — AXA — ALLIANZ — MAIF — MACIF — GROUPAMA — GMF — MATMUT —
-            </div>
+        <div class="insurance-box">
+            AGRÉÉ TOUTES ASSURANCES<br>
+            ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT
         </div>
     </div>
 </section>
@@ -116,10 +114,8 @@
     <div class="card"><h3><i>🚪</i>Ferme-portes</h3><p>Installation et réglage de grooms pour accès copropriété.</p></div>
 </div>
 
-<div class="footer-marquee">
-    <div class="marquee-content">
-        INTERVENTION EXPRESS MARSEILLE 30 MIN — 24H/24 ET 7J/7 — DEVIS GRATUIT — AGRÉÉ ASSURANCES — INTERVENTION EXPRESS MARSEILLE 30 MIN — 24H/24 ET 7J/7 — DEVIS GRATUIT — 
-    </div>
+<div class="info-bar-bottom">
+    Intervention Express 30 Min — 24h/24 & 7j/7 — Devis Gratuit
 </div>
 
 <footer class="footer-legal">
@@ -128,7 +124,7 @@
 </footer>
 
 <div id="cookie-msg">
-    <p><strong>Gestion des Cookies (Consent Mode v2)</strong><br>Nous utilisons des cookies pour optimiser votre appel d'urgence et mesurer l'efficacité de nos services à Marseille.</p>
+    <p><strong>Gestion des Cookies</strong><br>Nous utilisons des cookies pour optimiser votre appel d'urgence à Marseille.</p>
     <div class="ck-btns">
         <button class="ck-btn ck-refuse" onclick="setConsent('denied')">Refuser</button>
         <button class="ck-btn ck-accept" onclick="setConsent('granted')">Accepter</button>
@@ -140,20 +136,11 @@
 </div>
 
 <script>
-    // Fonction de mise à jour du consentement pour Google Ads
     function setConsent(status) { 
-        gtag('consent', 'update', { 
-            'ad_storage': status, 
-            'ad_user_data': status, 
-            'ad_ads_optimization': status, 
-            'ad_personalization': status, 
-            'analytics_storage': status 
-        }); 
+        gtag('consent', 'update', { 'ad_storage': status, 'ad_user_data': status, 'ad_ads_optimization': status, 'ad_personalization': status, 'analytics_storage': status }); 
         localStorage.setItem('cookieChoice', status); 
         document.getElementById('cookie-msg').style.display = 'none'; 
     }
-
-    // Affichage de la bannière si aucun choix n'est enregistré
     window.onload = function() { 
         if (!localStorage.getItem('cookieChoice')) { 
             document.getElementById('cookie-msg').style.display = 'block'; 
